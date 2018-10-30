@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Example</title>
+    <style>
+    .bx {
+        width: 50px; height: 50px; background-color: #666; display: inline-block;
+    }
+    .box {
+        width: 50px; height: 50px; background-color: #666; display: inline-block;
+    }
+    .box-1 {
+        width: 50px; height: 50px; background-color: #333; display: inline-block;
+    }
+    .box-2 {
+        width: 50px; height: 50px; background-color: #999; display: inline-block;
+    }
+    .box-3 {
+        width: 50px; height: 50px; background-color: #ccc; display: inline-block;
+    }
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+     <div class="box"></div>
+     <div style="clear: both;"></div>
+     <div class="box-1"></div>
+     <div style="clear: both;"></div>
+     <div class="box-2"></div>
+     <div style="clear: both;"></div>
+     <div class="box-3"></div>
+     <div style="clear: both;"></div>
+     <div class="bx box-4"></div>
+     <div style="clear: both;"></div>
+     <div class="bx box-5"></div>
+     <div style="clear: both;"></div>
+     <div class="bx box-6"></div>
+     <div style="clear: both;"></div>
+     <div class="bx box-7"></div>
+     <div style="clear: both;"></div>
+     <div class="bx box-8"></div>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    
+    <script>
+        
+        // TweenMax.to(target, duration, {vars});
+        // duration is in seconds
+        TweenMax.to(".box", 2, {marginLeft: 100});
+        //// or
+        //var myBox = document.getElementById('.box');
+        //TweenMax.to(myBox, 2, {left: 600});
+        
+        TweenMax.to(".box-1", 1, {opacity: 0.5, marginLeft: 50, delay:1});
+        // jquery selector target
+        TweenMax.to( $(".box-2") , 1, {opacity: 0.2, marginLeft: 30, delay:2});
+
+        TweenMax.to(".box-3", 1, {opacity: 0.2, marginLeft: 20, backgroundColor: "#ff6600", delay:3});
+        
+        TweenMax.to(".box-4", 4, {x: 200, rotation: 360, scale: 0.5, delay:0});
+
+        // css plugin
+        TweenMax.to(".box-5", 2, {css:{left:"70px", backgroundColor:"#FF0000"}, ease:Power2.easeOut});
+
+        // easing
+        TweenMax.to(".box-6", 2, {x: 600, ease:Back.easeOut});
+
+        TweenMax.from(".box-7", 2, {x: 600, ease:Bounce.easeOut});
+
+        TweenMax.from(".box-8", 0.5, {opacity:0, scale:0, ease:Bounce.easeOut});
+
+        // ease visualizer
+        // https://greensock.com/ease-visualizer
+
+        // //multiple targets // array of targets
+        // var boxOne, boxTwo; 
+        // TweenMax.to([boxOne, boxTwo] , 2, {opacity: 0, delay:1});
+        
+        
+    </script>
+
+  </body>
+</html>

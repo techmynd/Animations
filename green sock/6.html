@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+    .box {
+        width: 50px; height: 50px; background-color: #666; display: inline-block; margin: 4px;
+    }
+    .box-big {
+        width: 150px; height: 150px; background-color: #000; display: inline-block;
+    }
+    </style>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12">
+            <h2>Grouped Animation</h2>
+            <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione tempora fugiat consequatur quibusdam rem, vel beatae cumque autem, ullam aliquid.</p>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box-big"></div>
+          </div>
+
+          <div class="col-md-8">
+            <div class="details">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tempora esse facere necessitatibus culpa quaerat blanditiis reiciendis possimus, consectetur, placeat eaque provident ipsum, sit voluptate voluptatibus doloremque ut animi aspernatur consequuntur porro tempore odit debitis dignissimos? Sit beatae officia molestiae numquam magni aut consequatur quae ducimus, culpa temporibus libero odit perferendis officiis nemo ea, sequi suscipit, impedit provident magnam tenetur? Perspiciatis nulla blanditiis magnam voluptatum dolor odio neque illo dolore mollitia, aspernatur ad maxime, nisi sint officiis, totam tenetur tempora voluptates atque repellendus. Eveniet perferendis sunt repudiandae accusamus voluptate praesentium assumenda, consequatur explicabo deleniti magni, in nihil, omnis exercitationem fugiat.
+            </div>
+          </div>
+
+          <div class="col-md-12 text-center">
+            <br><br>
+
+            <div class="sequence"> 
+               <div class="box"></div>
+               <div class="box"></div>
+               <div class="box"></div>
+               <div class="box"></div>
+               <div class="box"></div>
+            </div> 
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+     
+     
+
+     
+     
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    
+    <script>
+        
+    var tl = new TimelineLite();
+
+    tl.from("h2", 0.5, {x:100, autoAlpha:0}, "group1")
+    .from(".intro", 0.5, {x:-100, autoAlpha:0}, "group1")
+    .from(".box-big", 0.5, {scale:0.5, autoAlpha:0}, "group2")
+    .from(".details", 0.5, {x:100, autoAlpha:0}, "group2")
+    .staggerFrom(".sequence .box", 0.5, {scale:0, rotation: -180, autoAlpha:0}, 0.2);
+
+    // group1 and group2 are just labels to mark elements in a group
+    
+    // global timescale change for all animations
+    // tl.timeScale(4); // 4 seconds from 0.5 seconds
+
+    </script>
+
+  </body>
+</html>
