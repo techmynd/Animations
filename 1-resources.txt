@@ -1,0 +1,10 @@
+animated font awesome
+http://l-lin.github.io/font-awesome-animation/
+
+https://wowjs.uk/
+
+http://ianlunn.github.io/Hover/
+
+https://daneden.github.io/animate.css/
+
+https://greensock.com/
