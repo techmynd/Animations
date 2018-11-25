@@ -10,3 +10,14 @@ https://daneden.github.io/animate.css/
 https://greensock.com/
 
 https://shapeshifter.design/
+
+
+
+**********************
+Copy / paste keyframes animations / from samples
+***********************
+http://animista.net/play/basic
+
+***************************
+keyframe tool / create your own keyframe animation
+https://keyframes.app
