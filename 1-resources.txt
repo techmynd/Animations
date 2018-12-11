@@ -14,6 +14,8 @@ https://shapeshifter.design/
 https://github.com/gmrchk/swup < page and elements transitions / css and js
 
 
+https://popmotion.io/
+
 **********************
 Copy / paste keyframes animations / from samples
 ***********************
